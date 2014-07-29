@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5AEC1CE2-31B9-47BD-91CE-4AA26F90268A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>kadai0626</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>04E8D01C-B765-4B1D-8B63-8A516FB2DA59</key>
+		<string>https://github.com/lassicyabuuchi/0626kadai2.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>kadai0626.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>04E8D01C-B765-4B1D-8B63-8A516FB2DA59</key>
+		<string>../..</string>
+		<key>B474D6D9-7F23-46DC-8806-087696F76769</key>
+		<string>../../kadai0626</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/lassicyabuuchi/0626kadai2.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>04E8D01C-B765-4B1D-8B63-8A516FB2DA59</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>04E8D01C-B765-4B1D-8B63-8A516FB2DA59</string>
+			<key>IDESourceControlWCCName</key>
+			<string>0626kadai2</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B474D6D9-7F23-46DC-8806-087696F76769</string>
+			<key>IDESourceControlWCCName</key>
+			<string>kadai0626</string>
+		</dict>
+	</array>
+</dict>
+</plist>
