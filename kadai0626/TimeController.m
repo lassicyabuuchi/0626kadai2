@@ -11,17 +11,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	NSTimer *timer;
-    timer = [NSTimer scheduledTimerWithTimeInterval:1.0
-                                             target:self
-                                           selector:@selector(onTime:)
-                                           userInfo:nil
-                                            repeats:YES];
-    //現在時刻取得
-    NSDate* now = [NSDate date];
-    NSDateFormatter *format = [NSDateFormatter new];
-    format.dateFormat = @"HH:mm:ss";
-    self.timeNow.text = [format stringFromDate:now];
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                      target:self
+                                                    selector:@selector(onTime:)
+                                                    userInfo:nil
+                                                     repeats:YES];
+    
+    [self onTime:timer ];
     
 }
 
@@ -32,11 +28,11 @@
 
 -(void)onTime:(NSTimer*)timer {
     //現在時刻取得
-    NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    format.dateFormat = @"HH:mm:ss";
+    NSDateFormatter *formatter = [NSDateFormatter new];
     
+    [formatter setDateFormat:@"HH:mm:ss"];
     NSDate* now = [NSDate date];
-    self.timeNow.text = [format stringFromDate:now];    
+    self.timeNow.text = [formatter stringFromDate:now];
 }
 
 @end
