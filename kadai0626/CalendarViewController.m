@@ -43,7 +43,12 @@ UITableViewCell *cell;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-      return 31;
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    
+    NSRange range = [calendar rangeOfUnit:NSDayCalendarUnit inUnit:NSMonthCalendarUnit forDate:self.now];
+    NSInteger lastday = range.length;
+    
+    return lastday;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -52,7 +57,7 @@ UITableViewCell *cell;
     if (cell == nil) {
         cell = [[CustomTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
- 
+    
     NSLocale *jalocale = [[NSLocale alloc]initWithLocaleIdentifier:@"ja_JP"];
     
     NSCalendar *calendar = [NSCalendar currentCalendar];
@@ -63,22 +68,20 @@ UITableViewCell *cell;
     comps.day = indexPath.row +1;
     
     NSDate *date = [calendar dateFromComponents:comps];
-    NSDateFormatter *format = [NSDateFormatter new];
-    [format setDateFormat:@"yyyy/MM/dd(E)"];
-    [format setLocale:jalocale];
+    NSDateFormatter *formatter = [NSDateFormatter new];
+    [formatter setDateFormat:@"yyyy/MM/dd(E)"];
+    [formatter setLocale:jalocale];
     
-    NSString *result = [format stringFromDate:date];
+    NSString *result = [formatter stringFromDate:date];
     
     cell.textLabel.text = result; //セル番号＋１＝日にち
     
     return cell;
 }
 
-
 // セルが呼び出される直前の動作
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // 現在日付を取得
     NSCalendar *calendar = [NSCalendar currentCalendar];
     
     NSUInteger flags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
@@ -107,7 +110,7 @@ UITableViewCell *cell;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // 選択されたセルを取得
-    cell = [tableView cellForRowAtIndexPath:indexPath];    
+    cell = [tableView cellForRowAtIndexPath:indexPath];
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
