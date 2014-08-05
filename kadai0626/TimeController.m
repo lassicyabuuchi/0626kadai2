@@ -16,9 +16,7 @@
                                                     selector:@selector(onTime:)
                                                     userInfo:nil
                                                      repeats:YES];
-    
     [self onTime:timer ];
-    
 }
 
 - (void)didReceiveMemoryWarning

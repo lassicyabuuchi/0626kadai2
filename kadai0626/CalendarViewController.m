@@ -117,7 +117,6 @@ UITableViewCell *cell;
     // 選択がはずれたセルを取得
     cell = [tableView cellForRowAtIndexPath:indexPath];
     [tableView reloadData];
-    
 }
 
 @end
