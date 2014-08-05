@@ -13,7 +13,7 @@
 		D21FF8DB195BB4F200557418 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D21FF8D9195BB4F200557418 /* InfoPlist.strings */; };
 		D21FF8DD195BB4F200557418 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D21FF8DC195BB4F200557418 /* main.m */; };
 		D21FF8E1195BB4F200557418 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D21FF8E0195BB4F200557418 /* AppDelegate.m */; };
-		D21FF8E4195BB4F200557418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D21FF8E2195BB4F200557418 /* Main.storyboard */; };
+		D21FF8E4195BB4F200557418 /* iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D21FF8E2195BB4F200557418 /* iphone.storyboard */; };
 		D21FF8E7195BB4F200557418 /* TimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D21FF8E6195BB4F200557418 /* TimeController.m */; };
 		D21FF8E9195BB4F200557418 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D21FF8E8195BB4F200557418 /* Images.xcassets */; };
 		D21FF8F0195BB4F300557418 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21FF8EF195BB4F300557418 /* XCTest.framework */; };
@@ -22,13 +22,7 @@
 		D21FF8FA195BB4F300557418 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D21FF8F8195BB4F300557418 /* InfoPlist.strings */; };
 		D21FF8FC195BB4F300557418 /* kadai0626Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D21FF8FB195BB4F300557418 /* kadai0626Tests.m */; };
 		D21FF98B195BEE9400557418 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D21FF98A195BEE9400557418 /* CalendarViewController.m */; };
-		D2276CE4195CF20C007E042F /* Default 2.png in Resources */ = {isa = PBXBuildFile; fileRef = D2276CE2195CF20C007E042F /* Default 2.png */; };
-		D2276CE5195CF20C007E042F /* Default 3.png in Resources */ = {isa = PBXBuildFile; fileRef = D2276CE3195CF20C007E042F /* Default 3.png */; };
 		D2588C3F198742480079E81C /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2588C3D198742480079E81C /* iPad.storyboard */; };
-		D2A50949198224C90004A75D /* Default 2X.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A50948198224C90004A75D /* Default 2X.png */; };
-		D2A5094B198224DB0004A75D /* Default 1X.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A5094A198224DB0004A75D /* Default 1X.png */; };
-		D2A5094E1982288B0004A75D /* Default l２x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A5094C1982288B0004A75D /* Default l２x.png */; };
-		D2A5094F1982288B0004A75D /* Default l３x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A5094D1982288B0004A75D /* Default l３x.png */; };
 		D2A58B5D1985E5A4001CAEF8 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A58B5C1985E5A4001CAEF8 /* CustomTableViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +47,7 @@
 		D21FF8DE195BB4F200557418 /* kadai0626-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kadai0626-Prefix.pch"; sourceTree = "<group>"; };
 		D21FF8DF195BB4F200557418 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D21FF8E0195BB4F200557418 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D21FF8E3195BB4F200557418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D21FF8E3195BB4F200557418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/iphone.storyboard; sourceTree = "<group>"; };
 		D21FF8E5195BB4F200557418 /* TimeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeController.h; sourceTree = "<group>"; };
 		D21FF8E6195BB4F200557418 /* TimeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeController.m; sourceTree = "<group>"; };
 		D21FF8E8195BB4F200557418 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -64,13 +58,7 @@
 		D21FF8FB195BB4F300557418 /* kadai0626Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kadai0626Tests.m; sourceTree = "<group>"; };
 		D21FF989195BEE9400557418 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		D21FF98A195BEE9400557418 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
-		D2276CE2195CF20C007E042F /* Default 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default 2.png"; sourceTree = "<group>"; };
-		D2276CE3195CF20C007E042F /* Default 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default 3.png"; sourceTree = "<group>"; };
 		D2588C3E198742480079E81C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/iPad.storyboard; sourceTree = "<group>"; };
-		D2A50948198224C90004A75D /* Default 2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default 2X.png"; sourceTree = "<group>"; };
-		D2A5094A198224DB0004A75D /* Default 1X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default 1X.png"; sourceTree = "<group>"; };
-		D2A5094C1982288B0004A75D /* Default l２x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default l２x.png"; sourceTree = "<group>"; };
-		D2A5094D1982288B0004A75D /* Default l３x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default l３x.png"; sourceTree = "<group>"; };
 		D2A5096919824B340004A75D /* kadai0626 copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "kadai0626 copy-Info.plist"; path = "/Users/yabuuchi/github/0626kadai2/kadai0626/kadai0626 copy-Info.plist"; sourceTree = "<absolute>"; };
 		D2A58B5B1985E5A4001CAEF8 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		D2A58B5C1985E5A4001CAEF8 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
@@ -138,7 +126,7 @@
 				D21FF8DF195BB4F200557418 /* AppDelegate.h */,
 				D21FF8E0195BB4F200557418 /* AppDelegate.m */,
 				D2588C3D198742480079E81C /* iPad.storyboard */,
-				D21FF8E2195BB4F200557418 /* Main.storyboard */,
+				D21FF8E2195BB4F200557418 /* iphone.storyboard */,
 				D21FF8E5195BB4F200557418 /* TimeController.h */,
 				D21FF8E6195BB4F200557418 /* TimeController.m */,
 				D21FF989195BEE9400557418 /* CalendarViewController.h */,
@@ -154,12 +142,6 @@
 		D21FF8D7195BB4F200557418 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D2A5094C1982288B0004A75D /* Default l２x.png */,
-				D2A5094D1982288B0004A75D /* Default l３x.png */,
-				D2A5094A198224DB0004A75D /* Default 1X.png */,
-				D2A50948198224C90004A75D /* Default 2X.png */,
-				D2276CE2195CF20C007E042F /* Default 2.png */,
-				D2276CE3195CF20C007E042F /* Default 3.png */,
 				D21FF8D8195BB4F200557418 /* kadai0626-Info.plist */,
 				D21FF8D9195BB4F200557418 /* InfoPlist.strings */,
 				D21FF8DC195BB4F200557418 /* main.m */,
@@ -271,14 +253,8 @@
 			files = (
 				D21FF8E9195BB4F200557418 /* Images.xcassets in Resources */,
 				D21FF8DB195BB4F200557418 /* InfoPlist.strings in Resources */,
-				D2A5094F1982288B0004A75D /* Default l３x.png in Resources */,
-				D2A50949198224C90004A75D /* Default 2X.png in Resources */,
-				D21FF8E4195BB4F200557418 /* Main.storyboard in Resources */,
-				D2276CE4195CF20C007E042F /* Default 2.png in Resources */,
-				D2A5094E1982288B0004A75D /* Default l２x.png in Resources */,
-				D2A5094B198224DB0004A75D /* Default 1X.png in Resources */,
+				D21FF8E4195BB4F200557418 /* iphone.storyboard in Resources */,
 				D2588C3F198742480079E81C /* iPad.storyboard in Resources */,
-				D2276CE5195CF20C007E042F /* Default 3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,12 +308,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		D21FF8E2195BB4F200557418 /* Main.storyboard */ = {
+		D21FF8E2195BB4F200557418 /* iphone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D21FF8E3195BB4F200557418 /* Base */,
 			);
-			name = Main.storyboard;
+			name = iphone.storyboard;
 			sourceTree = "<group>";
 		};
 		D21FF8F8195BB4F300557418 /* InfoPlist.strings */ = {
