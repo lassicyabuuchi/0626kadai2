@@ -33,7 +33,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="664" y="70"/>
+            <point key="canvasLocation" x="648" y="-738"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Z2R-9K-odz">
@@ -62,7 +62,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="py7-5D-4Cv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1190" y="803"/>
+            <point key="canvasLocation" x="1258" y="70"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="RSc-8s-qff">
@@ -77,11 +77,12 @@
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="K4Z-aD-5Ny"/>
                         <segue destination="gV6-w2-qWk" kind="relationship" relationship="viewControllers" id="QGs-aW-jnS"/>
+                        <segue destination="Shs-E5-gHU" kind="relationship" relationship="viewControllers" id="diU-4d-Fk3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J2g-mg-cxc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="82" y="70"/>
+            <point key="canvasLocation" x="-242" y="70"/>
         </scene>
         <!--Navigation Controller - Calender-->
         <scene sceneID="H47-WP-les">
@@ -100,7 +101,72 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GnY-d0-xIi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="664" y="803"/>
+            <point key="canvasLocation" x="648" y="70"/>
+        </scene>
+        <!--Navigation Controller - Message-->
+        <scene sceneID="8bl-ZN-omo">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Shs-E5-gHU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Message" id="Bzo-2u-svR"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3uU-ct-orq">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xI1-tT-7os" kind="relationship" relationship="rootViewController" id="PdI-j8-udj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w3K-Ce-RWa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="776"/>
+        </scene>
+        <!--Message Controller-->
+        <scene sceneID="FFU-zm-gbN">
+            <objects>
+                <viewController id="xI1-tT-7os" customClass="MessageController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uAF-eg-UBP"/>
+                        <viewControllerLayoutGuide type="bottom" id="fh1-Bk-qUI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fEb-Kv-BS4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ak3-HW-PU2">
+                                <rect key="frame" x="42" y="151" width="236" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yni-Ee-Wd5">
+                                <rect key="frame" x="124" y="261" width="72" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="send">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendText:" destination="xI1-tT-7os" eventType="touchUpInside" id="fIB-Y7-YK2"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hLW-HJ-Vgc">
+                                <rect key="frame" x="40" y="335" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.74032811750000005" green="0.98447040129999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qbZ-aO-ORJ"/>
+                    <connections>
+                        <outlet property="message" destination="Ak3-HW-PU2" id="1l9-bH-mRm"/>
+                        <outlet property="receive" destination="hLW-HJ-Vgc" id="wN3-TN-gn6"/>
+                        <outlet property="send" destination="yni-Ee-Wd5" id="nZf-eI-BkC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fka-2U-hAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1258" y="776"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
