@@ -2,6 +2,6 @@
 #import <UIKit/UIKit.h>
 #import <GameKit/GameKit.h>
 
-@interface MessageController : UIViewController <UIAlertViewDelegate>
+@interface MessageViewController : UIViewController <UIAlertViewDelegate>
 
 @end
