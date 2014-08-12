@@ -4,9 +4,9 @@
 @interface MessageViewController ()
 @property (nonatomic) IBOutlet UITextField *message;
 @property (nonatomic) IBOutlet UIButton *send;
-@property (nonatomic) GKSession* session;
+@property (nonatomic) GKSession *session;
 @property (nonatomic) NSString *peerID;
-@property (nonatomic) GKPeerPickerController* peerpickerController;
+@property (nonatomic) GKPeerPickerController *peerpickerController;
 
 @end
 
@@ -16,9 +16,9 @@
 {
     [super viewDidLoad];
     
-    [_send addTarget:self action:@selector(sendMessage:) forControlEvents:UIControlEventTouchUpInside];
+    [self.send addTarget:self action:@selector(sendMessage:) forControlEvents:UIControlEventTouchUpInside];
     
-    GKPeerPickerController* picker = [GKPeerPickerController new];
+    GKPeerPickerController *picker = [GKPeerPickerController new];
     picker.delegate = self;
     picker.connectionTypesMask = GKPeerPickerConnectionTypeNearby;
     [picker show];
@@ -35,9 +35,9 @@
 		NSLog(@"no connection");
 		return;
 	}
-	NSString* inputmessage = self.message.text;
-	NSData* data = [inputmessage dataUsingEncoding:NSUTF8StringEncoding];
-	NSError* error = nil;
+	NSString *inputmessage = self.message.text;
+	NSData *data = [inputmessage dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error = nil;
     
     [self.session sendData:data
 				   toPeers:[NSArray arrayWithObject:self.peerID]
@@ -61,7 +61,7 @@
 
 - (void)receiveData:(NSData *)data fromPeer:(NSString *)peer inSession:(GKSession *)session context:(void *)context
 {
-    NSString* message = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSString *message = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
                                                     message:message
