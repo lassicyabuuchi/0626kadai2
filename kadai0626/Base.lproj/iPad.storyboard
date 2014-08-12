@@ -148,7 +148,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="sendText:" destination="xI1-tT-7os" eventType="touchUpInside" id="fJ5-2S-S5H"/>
+                                    <action selector="sendMessage:" destination="xI1-tT-7os" eventType="touchUpInside" id="dEy-wO-x5y"/>
                                 </connections>
                             </button>
                         </subviews>

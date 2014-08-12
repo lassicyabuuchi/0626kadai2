@@ -6,20 +6,17 @@
 @property (nonatomic) IBOutlet UIButton *send;
 @property (nonatomic) GKSession* session;
 @property (nonatomic) NSString *peerID;
+@property (nonatomic) GKPeerPickerController* peerpickerController;
 
 @end
 
 @implementation MessageViewController
 
-@synthesize session = session_;
-@synthesize peerID = peerID_;
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    [_send addTarget:self action:@selector(sendText:) forControlEvents:UIControlEventTouchUpInside];
+    [_send addTarget:self action:@selector(sendMessage:) forControlEvents:UIControlEventTouchUpInside];
     
     GKPeerPickerController* picker = [GKPeerPickerController new];
     picker.delegate = self;
@@ -32,7 +29,7 @@
     picker.delegate = nil;
 }
 
-- (IBAction)sendText:(id)sender
+- (IBAction)sendMessage:(id)sender
 {
 	if (self.session == nil) {
 		NSLog(@"no connection");
@@ -47,30 +44,26 @@
 			  withDataMode:GKSendDataReliable
 					 error:&error];
 	if (error) {
-		NSLog(@"--------------------------------%@", error);
+		NSLog(@"%@", error);
 	}
 	self.message.text = @"";
 }
 
 - (void)peerPickerController:(GKPeerPickerController *)picker didConnectPeer:(NSString *)peerID toSession:(GKSession *)session
 {
-    NSLog(@"pickerRRRR:%@ peerID:%@ session:%@", picker, peerID, session);
-    
     self.peerID = peerID;
-    
-	self.session = session;
+    self.session = session;
 	session.delegate = self;
 	[session setDataReceiveHandler:self withContext:nil];
 	picker.delegate = nil;
 	[picker dismiss];
 }
 
-
-- (void)receiveText:(NSData *)data fromPeer:(NSString *)peer inSession:(GKSession *)session context:(void *)context
+- (void)receiveData:(NSData *)data fromPeer:(NSString *)peer inSession:(GKSession *)session context:(void *)context
 {
     NSString* message = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-
-     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
                                                     message:message
                                                    delegate:self
                                           cancelButtonTitle:nil

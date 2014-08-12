@@ -26,8 +26,10 @@
 	<true/>
 	<key>UIMainStoryboardFile</key>
 	<string>iphone</string>
+	<key>UIMainStoryboardFile~iPad</key>
+	<string>iPad</string>
 	<key>UIMainStoryboardFile~ipad</key>
-	<string>ipad</string>
+	<string>iPad</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

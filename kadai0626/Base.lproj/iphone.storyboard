@@ -133,7 +133,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ak3-HW-PU2">
-                                <rect key="frame" x="42" y="167" width="236" height="30"/>
+                                <rect key="frame" x="42" y="120" width="236" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -142,13 +142,13 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yni-Ee-Wd5">
-                                <rect key="frame" x="124" y="318" width="72" height="35"/>
+                                <rect key="frame" x="124" y="215" width="72" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="send">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="sendText:" destination="xI1-tT-7os" eventType="touchUpInside" id="fIB-Y7-YK2"/>
+                                    <action selector="sendMessage:" destination="xI1-tT-7os" eventType="touchUpInside" id="QRl-Qd-r5u"/>
                                 </connections>
                             </button>
                         </subviews>
