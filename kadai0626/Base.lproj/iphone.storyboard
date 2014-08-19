@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="i5u-cA-3c6">
     <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
@@ -33,7 +34,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="664" y="70"/>
+            <point key="canvasLocation" x="648" y="-738"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Z2R-9K-odz">
@@ -62,7 +63,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="py7-5D-4Cv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1190" y="803"/>
+            <point key="canvasLocation" x="1258" y="70"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="RSc-8s-qff">
@@ -77,11 +78,12 @@
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="K4Z-aD-5Ny"/>
                         <segue destination="gV6-w2-qWk" kind="relationship" relationship="viewControllers" id="QGs-aW-jnS"/>
+                        <segue destination="Shs-E5-gHU" kind="relationship" relationship="viewControllers" id="diU-4d-Fk3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J2g-mg-cxc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="82" y="70"/>
+            <point key="canvasLocation" x="-242" y="70"/>
         </scene>
         <!--Navigation Controller - Calender-->
         <scene sceneID="H47-WP-les">
@@ -100,7 +102,67 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GnY-d0-xIi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="664" y="803"/>
+            <point key="canvasLocation" x="648" y="70"/>
+        </scene>
+        <!--Navigation Controller - Message-->
+        <scene sceneID="8bl-ZN-omo">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Shs-E5-gHU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Message" id="Bzo-2u-svR"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3uU-ct-orq">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xI1-tT-7os" kind="relationship" relationship="rootViewController" id="PdI-j8-udj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w3K-Ce-RWa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="776"/>
+        </scene>
+        <!--Message View Controller-->
+        <scene sceneID="FFU-zm-gbN">
+            <objects>
+                <viewController id="xI1-tT-7os" customClass="MessageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uAF-eg-UBP"/>
+                        <viewControllerLayoutGuide type="bottom" id="fh1-Bk-qUI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fEb-Kv-BS4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ak3-HW-PU2">
+                                <rect key="frame" x="42" y="120" width="236" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="xI1-tT-7os" eventType="editingDidEndOnExit" id="bcV-rr-8RC"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yni-Ee-Wd5">
+                                <rect key="frame" x="124" y="215" width="72" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="send">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendMessage:" destination="xI1-tT-7os" eventType="touchUpInside" id="QRl-Qd-r5u"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qbZ-aO-ORJ"/>
+                    <connections>
+                        <outlet property="message" destination="Ak3-HW-PU2" id="1l9-bH-mRm"/>
+                        <outlet property="send" destination="yni-Ee-Wd5" id="nZf-eI-BkC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fka-2U-hAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1258" y="776"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

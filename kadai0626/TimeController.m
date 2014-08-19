@@ -2,7 +2,6 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *timeNow;
-- (void)onTime:(NSTimer*)timer;
 
 @end
 
