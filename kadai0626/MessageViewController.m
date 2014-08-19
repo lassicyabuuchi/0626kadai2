@@ -31,9 +31,9 @@
 
 - (IBAction)sendMessage:(id)sender
 {
-	if (self.session == nil) {
-		NSLog(@"no connection");
-		return;
+    if (self.session == nil) {
+        NSLog(@"no connection");
+        return;
 	}
 	NSString *inputmessage = self.message.text;
 	NSData *data = [inputmessage dataUsingEncoding:NSUTF8StringEncoding];
@@ -71,7 +71,8 @@
     [alert show];
 }
 
-- (IBAction)textFieldDoneEditing:(id)sender{
+- (IBAction)textFieldDoneEditing:(id)sender
+{
     [sender resignFirstResponder];
 }
 
